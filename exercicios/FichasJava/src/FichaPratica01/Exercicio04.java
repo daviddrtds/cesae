@@ -11,8 +11,8 @@ public class Exercicio04 {
         final double PI = 3.14;
         double raio, area;
 
-        System.out.println("Introduza o valor do raio da circunferência: ");
-        raio = input.nextInt();
+        System.out.print("Introduza o valor do raio da circunferência: ");
+        raio = input.nextDouble();
         area = PI * raio * raio;
         System.out.println("Área da Circunferência: " + area);
 

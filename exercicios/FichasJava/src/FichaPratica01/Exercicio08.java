@@ -8,29 +8,52 @@ public class Exercicio08 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Introduza os minutos da música 1:");
-        int music1Mins = input.nextInt();
-        System.out.println("Introduza os segundos da música 1:");
-        int music1Secs = input.nextInt();
 
-        System.out.println("Introduza os minutos da música 2:");
-        int music2Mins = input.nextInt();
-        System.out.println("Introduza os segundos da música 2:");
-        int music2Secs = input.nextInt();
+        int music1Mins, music1Secs, music2Mins, music2Secs, music3Mins, music3Secs,
+                music4Mins, music4Secs, music5Mins, music5Secs, totalMins, totalSecs, total;
 
-        System.out.println("Introduza os minutos da música 3:");
-        int music3Mins = input.nextInt();
-        System.out.println("Introduza os segundos da música 3:");
-        int music3Secs = input.nextInt();
+        System.out.print("Introduza os minutos da música 1:");
+        music1Mins = input.nextInt();
+        System.out.print("Introduza os segundos da música 1:");
+        music1Secs = input.nextInt();
 
-        System.out.println("Introduza os minutos da música 4:");
-        int music4Mins = input.nextInt();
-        System.out.println("Introduza os segundos da música 4:");
-        int music4Secs = input.nextInt();
+        System.out.print("Introduza os minutos da música 2:");
+        music2Mins = input.nextInt();
+        System.out.print("Introduza os segundos da música 2:");
+        music2Secs = input.nextInt();
 
-        System.out.println("Introduza os minutos da música 5:");
-        int music5Mins = input.nextInt();
-        System.out.println("Introduza os segundos da música 5:");
-        int music5Secs = input.nextInt();
+        System.out.print("Introduza os minutos da música 3:");
+        music3Mins = input.nextInt();
+        System.out.print("Introduza os segundos da música 3:");
+        music3Secs = input.nextInt();
+
+        System.out.print("Introduza os minutos da música 4:");
+        music4Mins = input.nextInt();
+        System.out.print("Introduza os segundos da música 4:");
+        music4Secs = input.nextInt();
+
+        System.out.print("Introduza os minutos da música 5:");
+        music5Mins = input.nextInt();
+        System.out.print("Introduza os segundos da música 5:");
+        music5Secs = input.nextInt();
+
+        totalMins = (music1Mins + music2Mins + music3Mins + music4Mins + music5Mins) * 60;
+
+        totalSecs = music1Secs + music2Secs + music3Secs + music4Secs + music5Secs;
+
+        total = totalMins + totalSecs;
+
+
+        System.out.println("Total de segundos: " + total);
+
+        int secs = total % 60;
+        int horas = total / 60;
+        int minutes = horas % 60;
+        horas = horas / 60;
+
+
+        System.out.println("Total do álbum: " + horas +"h " + minutes +"m " + secs + "s");
+        
+
     }
 }

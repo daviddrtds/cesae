@@ -10,10 +10,10 @@ public class Exercicio01 {
 
         int num1, num2, soma;
 
-        System.out.println("Insira um número maior do que 0:");
+        System.out.print("Insira um número maior do que 0: ");
         num1 = input.nextInt();
 
-        System.out.println("Insira um número maior do que 0:");
+        System.out.print("Insira outro número maior do que 0: ");
         num2 = input.nextInt();
 
         soma = num1 + num2;

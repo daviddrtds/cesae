@@ -10,11 +10,11 @@ public class Exercicio02 {
 
         double num1, num2, soma, sub, multi, divisao;
 
-        System.out.println("Introduza um número:");
-        num1 = input.nextInt();
+        System.out.print("Introduza um número:");
+        num1 = input.nextDouble();
 
-        System.out.println("Introduza um número:");
-        num2 = input.nextInt();
+        System.out.print("Introduza outro número:");
+        num2 = input.nextDouble();
 
         soma = num1 + num2;
         sub = num1 - num2;

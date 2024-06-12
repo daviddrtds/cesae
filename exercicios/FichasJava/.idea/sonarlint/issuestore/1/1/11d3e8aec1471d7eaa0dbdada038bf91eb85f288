@@ -1,0 +1,20 @@
+
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(äÕ¦J$36f4933f-5a98-4425-842f-9b65611ff865
+
+java:S1854("@Remove this useless assignment to local variable "totalSeconds".(ùşäúÿÿÿÿJ$222059ae-7e6e-47c3-b6da-8c85f655f793
+ƒ
+java:S1659"GDeclare "music1Secs" and all following declarations on a separate line.(…ÙĞúJ$0a3733bc-55b2-4180-8241-8f4b6718189d
+j
+java:S1481".Remove this unused "totalSecs" local variable.(æÊ”‡J$036dfb53-de83-4daf-b676-4b6818ca85c5
+k	java:S106"+Replace this use of System.out by a logger.(œÿÿúÿÿÿÿÿJ$5d8de23d-3366-40a7-a080-c1e984ef8952
+k	java:S106"+Replace this use of System.out by a logger.(²îå·üÿÿÿÿJ$e836a317-736c-454e-9580-bf9e6a055e71
+k	java:S106"+Replace this use of System.out by a logger.(©ª¡µøÿÿÿÿJ$f273c7c6-0ce7-450f-86a4-7c4b323e7ef4
+k	java:S106"+Replace this use of System.out by a logger.(ú…ØÈùÿÿÿÿJ$a767c867-329f-4fff-ad0b-03ea703789c2
+k	java:S106"+Replace this use of System.out by a logger.(¦Õ¨¡üÿÿÿÿJ$bdb87324-d387-44ee-adaa-42ab1be7c69a
+k	java:S106"+Replace this use of System.out by a logger.(ÃøÑ…üÿÿÿÿJ$727f7c86-6538-4ee2-88e8-dd3d93facc1a
+k	java:S106"+Replace this use of System.out by a logger.(ÌØ´şùÿÿÿÿJ$e931e2d9-7d5a-4989-8506-e3a9b741ec39
+k	java:S106 "+Replace this use of System.out by a logger.(£æÈØşÿÿÿÿJ$70ffa55a-7f47-4408-88f1-a3591d4b0010
+k	java:S106#"+Replace this use of System.out by a logger.(¾¼ùõşÿÿÿÿJ$9abd1880-d5bd-4656-bd19-bc1c3138a831
+k	java:S106%"+Replace this use of System.out by a logger.(ÁŞ™õûÿÿÿÿJ$2814e308-2e73-42e2-ae55-0065c26026f5
+r
+java:S1481("1Remove this unused "totalSeconds" local variable.(ùşäúÿÿÿÿJ$04d5ea3e-7b18-4736-b003-a8207fe17f66

@@ -8,16 +8,16 @@ public class Exercicio03 {
 
         Scanner input = new Scanner(System.in);
 
-        double largura, comprimento;
+        double largura, comprimento, area, perimetro;
 
-        System.out.println("Introduza o valor da largura:");
-        largura = input.nextInt();
+        System.out.print("Introduza o valor da largura:");
+        largura = input.nextDouble();
 
-        System.out.println("Introduza o valor do comprimento:");
-        comprimento = input.nextInt();
+        System.out.print("Introduza o valor do comprimento:");
+        comprimento = input.nextDouble();
 
-        double area = largura * comprimento;
-        double perimetro = 2 * (largura + comprimento);
+        area = largura * comprimento;
+        perimetro = 2 * (largura + comprimento);
         System.out.println("Área: " + area);
         System.out.println("Perímetro: " + perimetro);
 
