@@ -15,7 +15,7 @@ public class Exercicio10 {
         System.out.print("Segundo número:");
         double num2 = input.nextDouble();
 
-        System.out.println("Que operação aritmética deseja efetuar? (+, -, * ou /)");
+        System.out.print("Que operação aritmética deseja efetuar? (+, -, * ou /)");
         String userInput = input.next();
 
         switch (userInput) {
