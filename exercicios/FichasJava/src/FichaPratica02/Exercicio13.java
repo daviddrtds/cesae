@@ -14,31 +14,16 @@ public class Exercicio13 {
         System.out.print("Introduza o valor dos minutos:");
         int inputMinutos = input.nextInt();
 
-
-        String formato;
-        if(inputHoras >= 12){
-            formato = "PM";
-        } else{
-            formato = "AM";
+        if (inputHoras >= 12) {
+            if (inputHoras != 12){
+                inputHoras = inputHoras - 12;
+            }
         }
-
-
 
 
         if (inputHoras < 0 || inputHoras > 23 || inputMinutos < 0 || inputMinutos > 59) {
             System.out.println("Valor inválido.");
-        }  else if (inputHoras > 12) {
-            System.out.println(inputHoras - 12 + ":" + inputMinutos + formato);
-        }  else if (inputHoras < 10 && inputMinutos < 10) {
-            System.out.println("0" + inputHoras + ":0" + inputMinutos + formato);
-        } else if (inputHoras < 10 && inputMinutos > 10) {
-            System.out.println("0" + inputHoras + ":" + inputMinutos + formato);
-        } else if (inputHoras > 10 && inputMinutos < 10) {
-            System.out.println(inputHoras + ":0" + inputMinutos + formato);
-        } else {
-            System.out.println(inputHoras + ":" + inputMinutos + formato);
         }
-
 
     }
 }

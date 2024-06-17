@@ -34,6 +34,7 @@ public class Exercicio12 {
 
             default:
                 System.out.println("Opção inválida. Escolha uma opção de 1 a 4.");
+                break;
         }
 
 

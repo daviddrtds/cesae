@@ -19,7 +19,8 @@ public class Exercicio11 {
         if (total < 0) {
             System.out.println("Operação Inválida, saldo insuficiente.");
         } else {
-            System.out.println("Saldo atual: " + total);
+            saldo= total;
+            System.out.println("Saldo atual: " + saldo);
         }
 
     }
