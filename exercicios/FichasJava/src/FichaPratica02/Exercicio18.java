@@ -12,7 +12,7 @@ public class Exercicio18 {
         System.out.print("Introduza o código de colaborador:");
         int codigoFunc = input.nextInt();
 
-        System.out.print("Introduza o Cargo do Colaborador: (E) Empregado, (C) Chefe ou (A) Administrador");
+        System.out.print("Introduza o Cargo do Colaborador: (E) Empregado, (C) Chefe ou (A) Administrador:");
         String cargoFunc = input.next();
 
         System.out.print("Introduza o total de dias trabalhados no mês:");
