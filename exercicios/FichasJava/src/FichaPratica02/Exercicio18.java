@@ -13,7 +13,7 @@ public class Exercicio18 {
         int codigoFunc = input.nextInt();
 
         System.out.print("Introduza o Cargo do Colaborador: (E) Empregado, (C) Chefe ou (A) Administrador:");
-        String cargoFunc = input.next();
+        String cargoFunc = input.next().toUpperCase();
 
         System.out.print("Introduza o total de dias trabalhados no mês:");
         int diasMes = input.nextInt();
@@ -21,12 +21,13 @@ public class Exercicio18 {
 
         double valorBruto = 0;
         double subAlim = 0;
-        double valorIRS = 0;
+        double valorIRS;
         double valorSS = 0;
         double valorSSEmpresa = 0;
 
 
-        if (diasMes > 0) {
+        //string.equals(otherString) --> modo de comparar Strings
+        if ((diasMes > 0) && (cargoFunc.equals("A") || cargoFunc.equals("E") || cargoFunc.equals("C"))) {
 
             switch (cargoFunc) {
                 case "E":
@@ -66,9 +67,10 @@ public class Exercicio18 {
 
 
         } else {
-            System.out.println("Valor inválido, introduza um número de dias maior do que 0");
+            System.out.println("Valor inválido, introduza um número de dias maior do que 0 ou um cargo valido");
         }
 
-
+        // Close the scanner Always!!
+        input.close();
     }
 }
