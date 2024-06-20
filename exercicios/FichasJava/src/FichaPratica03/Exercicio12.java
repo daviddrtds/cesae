@@ -22,19 +22,15 @@ public class Exercicio12 {
             if (inputNum > 0 && inputNum <= 25) {
                 count0025++;
             }
-
             if (inputNum > 25 && inputNum <= 50) {
                 count2650++;
             }
-
             if (inputNum > 50 && inputNum <= 75) {
                 count5175++;
             }
-
             if (inputNum > 75 && inputNum <= 100) {
                 count76100++;
             }
-
             System.out.print("Introduza outro número:");
             inputNum = input.nextInt();
         }
