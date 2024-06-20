@@ -10,16 +10,18 @@ public class Exercicio15 {
         System.out.print("Insira um número entre 1 e 5:");
         int numInput = input.nextInt();
 
-        int count = 0;
+        int count = 1;
+        int total = 1;
 
 
-        if (numInput > 5) {
-            System.out.println("Número demasiado grande. Tente um número entre 1 e 5");
+        if (numInput > 12 || numInput < 0) {
+            System.out.println("Tente um número entre 1 e 12");
         } else {
             while (numInput > count) {
-                count++;
-                System.out.println(count);
+                total = total * numInput;
+                numInput--;
             }
+            System.out.println(total);
 
         }
 
