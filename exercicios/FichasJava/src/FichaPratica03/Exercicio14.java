@@ -9,7 +9,7 @@ public class Exercicio14 {
 
         System.out.print("Quantos números deseja inserir?");
         int max = input.nextInt();
-        int novo;
+        int novo = 0;
 
         int count = 1;
 
@@ -18,6 +18,8 @@ public class Exercicio14 {
             novo = input.nextInt();
             count++;
         }
+
+
 
 
     }
