@@ -9,14 +9,14 @@ public class Exercicio06 {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Introduza o primeiro número:");
-        int num1 = input.nextInt();
+        int numInicio = input.nextInt();
 
         System.out.print("Introduza o segundo número:");
-        int num2 = input.nextInt();
+        int numFim = input.nextInt();
 
-        while (num1 <= num2){
-            System.out.println(num1);
-            num1 ++;
+        while (numInicio <= numFim){
+            System.out.println(numInicio);
+            numInicio ++;
         }
 
 
