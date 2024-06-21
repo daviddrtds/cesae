@@ -13,6 +13,7 @@ public class Exercicio14 {
         int anterior;
 
         int count = 1;
+        boolean crescente = true;
 
         System.out.print("Introduza um número:");
         anterior = input.nextInt();
@@ -22,16 +23,20 @@ public class Exercicio14 {
             System.out.print("Introduza um número:");
             novo = input.nextInt();
 
-            if(anterior<=novo){
-                // Deixou de ser crescente
+            if (anterior >= novo) {
+                crescente = false;
             }
 
-            anterior=novo;
+            anterior = novo;
 
             count++;
         }
 
-
+        if (crescente) {
+            System.out.println("Crescente");
+        } else {
+            System.out.println("Não Crescente");
+        }
 
 
     }

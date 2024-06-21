@@ -23,6 +23,7 @@ public class Exercicio09 {
         }
 
         total++;
+
         System.out.println("Média: " + total / contador);
         System.out.println("Total: " + total);
         System.out.println("Tentativas: " + contador);
