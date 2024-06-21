@@ -19,7 +19,7 @@ public class Exercicio11 {
         if (limite > 0 && salto > 0) {
             while (count <= limite) {
                 System.out.println(count);
-                count += salto;
+                count = count + salto;
             }
         } else {
             System.out.println("Erro, introduza valores maiores de 0");

@@ -11,21 +11,21 @@ public class Exercicio09 {
         System.out.print("Introduza um número:");
         int num1 = input.nextInt();
 
-        int mediaVezes = 0;
-        int mediaTotal = num1;
+        int contador = 0;
+        int total = num1;
 
 
         while (num1 != -1) {
             System.out.print("Introduza um número:");
             num1 = input.nextInt();
-            mediaVezes++;
-            mediaTotal = mediaTotal + num1;
+            total = total + num1;
+            contador++;
         }
 
-        mediaTotal++;
-        System.out.println("Média: " + mediaTotal / mediaVezes);
-        System.out.println("Total: " + mediaTotal);
-        System.out.println("Tentativas: " + mediaVezes);
+        total++;
+        System.out.println("Média: " + total / contador);
+        System.out.println("Total: " + total);
+        System.out.println("Tentativas: " + contador);
 
     }
 }

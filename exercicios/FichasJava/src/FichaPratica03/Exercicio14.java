@@ -9,13 +9,25 @@ public class Exercicio14 {
 
         System.out.print("Quantos números deseja inserir?");
         int max = input.nextInt();
-        int novo = 0;
+        int novo;
+        int anterior;
 
         int count = 1;
 
-        while (count <= max) {
+        System.out.print("Introduza um número:");
+        anterior = input.nextInt();
+
+
+        while (count < max) {
             System.out.print("Introduza um número:");
             novo = input.nextInt();
+
+            if(anterior<=novo){
+                // Deixou de ser crescente
+            }
+
+            anterior=novo;
+
             count++;
         }
 
