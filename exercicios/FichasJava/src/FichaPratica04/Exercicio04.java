@@ -14,7 +14,11 @@ public class Exercicio04 {
         int num1 = input.nextInt();
 
 
-        for (int i = 2; i <= num1 / 2; i++) {
+        if (num1 <= 1) {
+            numeroPrimo = false;
+        }
+
+        for (int i = 2; i < num1; i++) {
             if (num1 % i == 0) {
                 numeroPrimo = false;
                 break;
@@ -22,9 +26,9 @@ public class Exercicio04 {
         }
 
 
-        if(numeroPrimo){
+        if (numeroPrimo) {
             System.out.println("É número primo");
-        }else{
+        } else {
             System.out.println("Não é número primo.");
         }
 
