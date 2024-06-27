@@ -8,9 +8,9 @@ public class Exercicio01 {
 
         Scanner input = new Scanner(System.in);
 
-        boolean continuar = true;
+        String continuar;
 
-        while (continuar){
+        do {
 
             System.out.print("Introduza o primeiro número:");
             double num1 = input.nextDouble();
@@ -21,7 +21,7 @@ public class Exercicio01 {
             System.out.print("Introduza a operação a realizar (+, -, * ou /):");
             String operacao = input.next();
 
-            switch (operacao){
+            switch (operacao) {
 
                 case "+":
                     System.out.println("Soma de " + num1 + "+" + num2 + ": " + (num1 + num2));
@@ -42,28 +42,17 @@ public class Exercicio01 {
 
                 default:
                     System.out.println("Caracter incorreto, introduza +, -, * ou /");
+                    break;
             }
 
-            System.out.print("Deseja continuar? (s/n)");
-            String pergunta = input.next();
 
-            switch (pergunta){
-                case "s": continuar = true;
-                break;
-                case "n": continuar = false;
-                break;
-                default:
-                    System.out.println("Caracter incorreto, introduza s ou n");
-                    continuar = false;
-            }
-
-        }
+            do {
+                System.out.print("Deseja continuar? (s/n)");
+                continuar = input.next();
+            } while (!continuar.equalsIgnoreCase("s") && !continuar.equalsIgnoreCase("n"));
 
 
-
-
-
-
+        } while (continuar.equalsIgnoreCase("s"));
 
 
     }
