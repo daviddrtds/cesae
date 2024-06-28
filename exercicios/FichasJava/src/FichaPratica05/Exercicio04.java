@@ -9,7 +9,6 @@ public class Exercicio04 {
         Scanner input = new Scanner(System.in);
 
         int[] novoArray = new int[10];
-        int anterior = 0;
         int valorMenor = 0;
 
 
@@ -18,10 +17,11 @@ public class Exercicio04 {
             System.out.print("insira um número inteiro: ");
             novoArray[i] = input.nextInt();
 
-            if (novoArray[i] < anterior) {
+            valorMenor = novoArray[0];
+
+            if (novoArray[i] < valorMenor) {
                 valorMenor = novoArray[i];
             }
-            anterior = novoArray[i];
         }
 
 

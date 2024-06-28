@@ -9,17 +9,17 @@ public class Exercicio03 {
         Scanner input = new Scanner(System.in);
 
         int[] novoArray = new int[10];
-        int anterior = 0;
-        int valorMaior = 0;
+        int valorMaior=0;
 
 
         for (int i = 0; i < novoArray.length; i++) {
             System.out.print("insira um número inteiro: ");
             novoArray[i] = input.nextInt();
 
-            if (novoArray[i] > anterior) {
+            valorMaior = novoArray[0];
+
+            if (novoArray[i] > valorMaior) {
                 valorMaior = novoArray[i];
-                anterior = novoArray[i];
             }
 
         }

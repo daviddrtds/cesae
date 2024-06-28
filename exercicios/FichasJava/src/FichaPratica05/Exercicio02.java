@@ -11,13 +11,13 @@ public class Exercicio02 {
         String[] nomeMeses = new String[]{"janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"};
 
 
-        int[] comissoes = new int[12];
-        int total = 0;
+        double[] comissoes = new double[12];
+        double total = 0;
 
 
         for (int i = 0; i < comissoes.length; i++) {
             System.out.print("Introduza o valor para a comissão de " + nomeMeses[i] + ":");
-            comissoes[i] = input.nextInt();
+            comissoes[i] = input.nextDouble();
             total = total + comissoes[i];
         }
 
