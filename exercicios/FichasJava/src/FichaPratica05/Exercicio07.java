@@ -2,8 +2,7 @@ package FichaPratica05;
 
 import java.util.Scanner;
 
-public class Exercicio06 {
-
+public class Exercicio07 {
 
     public static void main(String[] args) {
 
@@ -13,28 +12,26 @@ public class Exercicio06 {
 
         int anterior = 0;
         int atualMaior = 0;
-        boolean crescente = true;
 
 
         for (int i = 0; i < novoArray.length; i++) {
 
             System.out.print("insira um número inteiro: ");
             novoArray[i] = input.nextInt();
-            crescente = false;
-            if (novoArray[i] > anterior) {
+
+            if (novoArray[i] > anterior && novoArray[i] % 2 == 0) {
                 atualMaior = novoArray[i];
                 anterior = novoArray[i];
-                crescente = true;
             }
-
-
         }
 
-        if (crescente) {
-            System.out.println("Os números estão por ordem crescente.");
-        } else{
-            System.out.println("Os números NÃO estão por ordem crescente.");
+
+        if (atualMaior > 0) {
+            System.out.println("Maior valor par inserido: " + atualMaior);
+        } else {
+            System.out.println("Nenhum valor par inserido");
         }
+
 
     }
 }
