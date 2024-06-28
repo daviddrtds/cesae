@@ -9,7 +9,7 @@ public class Exercicio03 {
         Scanner input = new Scanner(System.in);
 
         int[] novoArray = new int[5];
-        int valorMaior;
+        int valorMaior = 0;
 
 
         for (int i = 0; i < novoArray.length; i++) {
