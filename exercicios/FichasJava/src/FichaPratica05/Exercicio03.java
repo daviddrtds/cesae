@@ -8,21 +8,23 @@ public class Exercicio03 {
 
         Scanner input = new Scanner(System.in);
 
-        int[] novoArray = new int[10];
-        int valorMaior=0;
+        int[] novoArray = new int[5];
+        int valorMaior;
 
 
         for (int i = 0; i < novoArray.length; i++) {
             System.out.print("insira um número inteiro: ");
             novoArray[i] = input.nextInt();
+        }
 
-            valorMaior = novoArray[0];
+        valorMaior = novoArray[0];
 
+        for (int i = 0; i < novoArray.length; i++) {
             if (novoArray[i] > valorMaior) {
                 valorMaior = novoArray[i];
             }
-
         }
+
 
         System.out.println("Valor maior inserido: " + valorMaior);
 

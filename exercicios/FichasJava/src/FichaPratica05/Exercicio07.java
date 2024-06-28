@@ -8,28 +8,28 @@ public class Exercicio07 {
 
         Scanner input = new Scanner(System.in);
 
-        int[] novoArray = new int[10];
-
-        int anterior = 0;
-        int atualMaior = 0;
+        int[] novoArray = new int[3];
+        int maiorPar;
 
 
         for (int i = 0; i < novoArray.length; i++) {
-
-            System.out.print("insira um número inteiro: ");
+            System.out.print("insira um número inteiro no index [" + i + "]:");
             novoArray[i] = input.nextInt();
+        }
 
-            if (novoArray[i] > anterior && novoArray[i] % 2 == 0) {
-                atualMaior = novoArray[i];
-                anterior = novoArray[i];
+        maiorPar = novoArray[0];
+
+        for (int i = 0; i < novoArray.length; i++) {
+            if (novoArray[i] % 2 == 0) {
+                    maiorPar = novoArray[i];
             }
         }
 
 
-        if (atualMaior > 0) {
-            System.out.println("Maior valor par inserido: " + atualMaior);
+        if (maiorPar % 2 != 0) {
+            System.out.println("Não inseriu valor par");
         } else {
-            System.out.println("Nenhum valor par inserido");
+            System.out.println("Maior valor par inserido: " + maiorPar);
         }
 
 
