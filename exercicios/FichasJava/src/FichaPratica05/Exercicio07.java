@@ -10,7 +10,7 @@ public class Exercicio07 {
 
         int[] novoArray = new int[3];
         int parMaior;
-        boolean encontrouPar = false;
+        boolean encontrouPar = false;  //  = (novoArray[0]%2==0) tira o if do par do index0
 
 
         for (int i = 0; i < novoArray.length; i++) {
@@ -27,7 +27,7 @@ public class Exercicio07 {
         }
 
 
-        for (int i = 1; i < novoArray.length; i++) {     // proxima verificação começa no index 1
+        for (int i = 0; i < novoArray.length; i++) {
             if (novoArray[i] % 2 == 0) {
 
                 if (novoArray[i] > parMaior || !encontrouPar) {
