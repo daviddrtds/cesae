@@ -9,6 +9,8 @@ public class Exercicio06 {
 
 
         Scanner input = new Scanner(System.in);
+        System.out.print("Insira o tamanho do array: ");
+        String animal = input.next().toLowerCase();
 
 
     }
