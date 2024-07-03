@@ -3,6 +3,11 @@ package FichaPratica06;
 public class Exercicio05 {
 
 
+    /**
+     * @param arr
+     * @return
+     */
+
     public static int maiorArr(int[] arr) {
 
         int maior = arr[0];
@@ -39,6 +44,26 @@ public class Exercicio05 {
             }
         }
         return crescente;
+    }
+
+
+    public static void drawSquare(String letter, int[][] arrOne) {
+
+
+        for (int i = 0; i < arrOne.length; i++) {
+            for (int j = 0; j < arrOne[0].length; j++) {
+
+                if (i == 0 && i == arrOne.length - 1) {
+                    System.out.print(letter + " ");
+
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+
     }
 
 
