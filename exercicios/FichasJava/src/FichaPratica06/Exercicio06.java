@@ -34,6 +34,7 @@ public class Exercicio06 {
             System.out.println("7. Ver o maior número do array");
             System.out.println("8. Ver o menor número do array");
             System.out.println("9. Ver se o array é crescente");
+            System.out.println("0. Sair");
             opcaoMenu = input.nextInt();
 
             switch (opcaoMenu) {
@@ -49,13 +50,17 @@ public class Exercicio06 {
                     System.out.println("O array é crescente? " + isCrescentArr(newArr));
                     break;
 
+                case 0:
+                    System.out.println("Adeuzinho");
+                    break;
+
                 default:
                     System.out.println("Opção de menu inválida");
                     break;
             }
 
 
-        } while (opcaoMenu <= 9 && opcaoMenu >= 7);
+        } while (opcaoMenu != 0);
 
 
     }

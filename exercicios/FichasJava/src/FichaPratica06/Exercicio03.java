@@ -73,9 +73,12 @@ public class Exercicio03 {
 
         for (int i = 1; count < num; i++) {
             count = count + i;
+            if (num == count) {
+                return true;
+            }
         }
 
-        return count == num;
+        return false;
 
     }
 

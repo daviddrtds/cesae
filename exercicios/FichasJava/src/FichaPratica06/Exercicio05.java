@@ -3,11 +3,6 @@ package FichaPratica06;
 public class Exercicio05 {
 
 
-    /**
-     * @param arr
-     * @return
-     */
-
     public static int maiorArr(int[] arr) {
 
         int maior = arr[0];
@@ -34,16 +29,13 @@ public class Exercicio05 {
 
     public static boolean isCrescentArr(int[] arr) {
 
-        int anterior = arr[0];
-        boolean crescente = true;
 
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < anterior) {
-                crescente = false;
-                break;
+            if (arr[i] <= arr[i - 1]) {
+                return false;
             }
         }
-        return crescente;
+        return true;
     }
 
 
@@ -67,8 +59,8 @@ public class Exercicio05 {
 
         int[][] threeMatrix = new int[oneMatrix.length][oneMatrix[0].length];
 
-        for(int i = 0; i<threeMatrix.length;i++){
-            for(int j = 0; j<threeMatrix[0].length;j++){
+        for (int i = 0; i < threeMatrix.length; i++) {
+            for (int j = 0; j < threeMatrix[0].length; j++) {
                 threeMatrix[i][j] = oneMatrix[i][j] + twoMatrix[i][j];
                 System.out.print(threeMatrix[i][j] + " ");
             }

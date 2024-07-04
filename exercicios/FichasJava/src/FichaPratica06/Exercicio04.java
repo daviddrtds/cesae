@@ -52,6 +52,9 @@ public class Exercicio04 {
                     System.out.print("Insira um novo número: ");
                     num = input.nextInt();
                     break;
+                case 7:
+                    System.out.print("Adeuzinho");
+                    break;
                 default:
                     System.out.println("Opção Inválida!");
                     break;
