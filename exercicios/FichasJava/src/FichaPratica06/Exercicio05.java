@@ -61,4 +61,45 @@ public class Exercicio05 {
             System.out.println();
         }
     }
+
+
+    public static void somarMatrizes(int[][] oneMatrix, int[][] twoMatrix) {
+
+        int[][] threeMatrix = new int[oneMatrix.length][oneMatrix[0].length];
+
+        for(int i = 0; i<threeMatrix.length;i++){
+            for(int j = 0; j<threeMatrix[0].length;j++){
+                threeMatrix[i][j] = oneMatrix[i][j] + twoMatrix[i][j];
+                System.out.print(threeMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+
+
+    }
+
+
+    public static int somatorioMatrizes(int[][] oneMatrix, int[][] twoMatrix) {
+
+        int total = 0;
+
+        for (int i = 0; i < oneMatrix.length; i++) {
+            for (int j = 0; j < oneMatrix[0].length; j++) {
+                total = total + oneMatrix[i][j];
+            }
+        }
+
+        for (int i = 0; i < twoMatrix.length; i++) {
+            for (int j = 0; j < twoMatrix[0].length; j++) {
+                total = total + twoMatrix[i][j];
+            }
+        }
+
+        return total;
+
+    }
+
+
 }
