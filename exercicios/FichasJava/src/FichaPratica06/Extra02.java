@@ -2,18 +2,14 @@ package FichaPratica06;
 
 import java.util.Scanner;
 
-public class extra01 {
+public class Extra02 {
 
 
-    public static int numeroMaisPequeno(int num1, int num2, int num3) {
+    public static double media(int num1, int num2, int num3) {
 
-        if (num1 < num2 && num1 < num3) {
-            return num1;
-        }
-        if (num2 < num1 && num2 < num3) {
-            return num2;
-        }
-        return num3;
+        double media = (num1 + num2 + num3) / 3;
+        return media;
+
     }
 
 
@@ -30,10 +26,10 @@ public class extra01 {
         System.out.print("Introduza o terceiro número: ");
         int num3 = input.nextInt();
 
-        int isSmall = numeroMaisPequeno(num1, num2, num3);
+        double media = media(num1, num2, num3);
 
 
-        System.out.println("O número mais pequeno é: " + isSmall);
+        System.out.println("A média dos números introduzidos é: " + media);
+
     }
-
 }
