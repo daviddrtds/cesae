@@ -34,7 +34,6 @@ public class Exercicio08 {
         }
 
 
-
         soma = somatorioMatrizes(oneMatrix, twoMatrix);
         System.out.println("Total da soma das duas matrizes: " + soma);
         somarMatrizes(oneMatrix, twoMatrix);
