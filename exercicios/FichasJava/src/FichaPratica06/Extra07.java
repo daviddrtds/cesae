@@ -2,19 +2,23 @@ package FichaPratica06;
 
 import java.util.Scanner;
 
-public class Extra06 {
+public class Extra07 {
 
 
-    public static double somatorio(int num) {
+    public static int inverterNum(int num) {
 
-        int soma = 0;
+        int inv = 0;
 
         while (num > 0) {
-            soma = soma + num % 10;
-            num = num / 10;
+            inv = inv * 10;
+            inv = inv + num % 10;
+            num /= 10;
         }
-        return soma;
+
+        return inv;
+
     }
+
 
     public static void main(String[] args) {
 
@@ -23,8 +27,7 @@ public class Extra06 {
         System.out.print("Introduza um número: ");
         int num1 = input.nextInt();
 
-        System.out.println("A soma dos números de " + num1 + " é " + somatorio(num1));
-
+        System.out.println("O número invertido de " + num1 + " é " + inverterNum(num1));
 
     }
 }
