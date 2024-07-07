@@ -29,7 +29,7 @@ public class Extra10 {
 
 
 
-        do{
+       // do{
 
             System.out.println("******* Programa de cálculo de preço imobiliário *******");
             System.out.println("Escolha a forma do seu terreno: ");
@@ -44,7 +44,7 @@ public class Extra10 {
 
 
 
-        }while(userInput !=0);
+       // }while(userInput !=0);
 
 
 
