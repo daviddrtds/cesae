@@ -15,7 +15,7 @@ public class Exercicio06 {
         int maior = 0;
         String nome = "vazio";
 
-        while (scanner.hasNext()) {
+        while (scanner.hasNextLine()) {
             String atual = scanner.nextLine();
             String[] arr = atual.split(",");
             int num = Integer.parseInt(arr[1]);

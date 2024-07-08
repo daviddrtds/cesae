@@ -7,15 +7,17 @@ import java.util.Scanner;
 
 public class Exercicio03 {
 
-    public static void leECriaFicheiro(String pathOrigem, String nomeNovo) throws FileNotFoundException {
+    public static void leECriaFicheiro(String pathOrigem, String pathFinal) throws FileNotFoundException {
+
+
 
         File fileOrigem = new File(pathOrigem);
 
-        File fileFinal = new File("FicheirosFicha07/" + nomeNovo + ".txt");
+        File fileFinal = new File(pathFinal);
 
         Scanner scannerFicheiro = new Scanner(fileOrigem);
 
-        while (scannerFicheiro.hasNext()) {
+        while (scannerFicheiro.hasNextLine()) {
             String linhaAtual = scannerFicheiro.nextLine();
             PrintWriter novoPrint = new PrintWriter(fileFinal);
             novoPrint.println(linhaAtual);

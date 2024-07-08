@@ -14,7 +14,7 @@ public class Exercicio05 {
 
         int soma = 0;
 
-        while (lerFile.hasNext()) {
+        while (lerFile.hasNextInt()) {
             int num = lerFile.nextInt();
             soma = soma + num;
         }

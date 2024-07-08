@@ -11,7 +11,7 @@ public class Exercicio04 {
         File fileOrigem = new File(path);
         Scanner scannFicheiro = new Scanner(fileOrigem);
 
-        while (scannFicheiro.hasNext()) {
+        while (scannFicheiro.hasNextLine()) {
             String novaLinha = scannFicheiro.nextLine();
             String[] arr = novaLinha.split(";");
             for (int i = 0; i < arr.length; i++) {

@@ -14,43 +14,60 @@ public class Exercicio09 {
         String primeiraLinha = scanner.nextLine();
 
         int numLinhas = 0;
-        String[] arr1 = primeiraLinha.split(",");
-
 
         while (scanner.hasNextLine()) {
             primeiraLinha = scanner.nextLine();
             numLinhas++;
         }
 
-        Scanner scanner2 = new Scanner(fileTxt);
-        String cabecalho = scanner2.nextLine();
-        String cabecalho2= scanner2.nextLine();
-        String[] arr2 = cabecalho2.split(",");
-        String[][] matrix1 = new String[numLinhas][arr1.length];
+        String[][] matrixCompleta = new String[numLinhas][4];
 
-//        while (scanner2.hasNextLine()) {
-//            primeiraLinha = scanner2.nextLine();
-//            arr1 = primeiraLinha.split(",");
-//
-//            for (int i = 0; i < matrix1.length; i++) {
-//                for (int j = 0; j < matrix1[0].length; j++) {
-//                    matrix1[i][j] = arr1[j];
-//                }
-//
-//                primeiraLinha = scanner2.nextLine();
-//                arr1 = primeiraLinha.split(",");
-//            }
-//        }
+        Scanner scanner2 = new Scanner((fileTxt));
+        String segundaLinha = scanner2.nextLine();
+        int contaLinhaMatrix = 0;
 
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[0].length; j++) {
-                matrix1[i][j] = arr2[j];
+        while (scanner2.hasNextLine()) {
+            segundaLinha = scanner2.nextLine();
+            String[] arr1 = segundaLinha.split(",");
+
+            for (int i = 0; i < matrixCompleta[0].length; i++) {
+                matrixCompleta[contaLinhaMatrix][i] = arr1[i];
             }
-            cabecalho2 = scanner2.nextLine();
-            arr2 = cabecalho2.split(",");
+            contaLinhaMatrix++;
         }
 
-        return matrix1;
+        return matrixCompleta;
+    }
+
+
+    public static void menu() {
+
+        Scanner input = new Scanner(System.in);
+        int opcao = 0;
+
+
+
+        do {
+            System.out.println("Programa de músicas");
+            System.out.println("1. Pesquisar por género");
+            System.out.println("2. Pesquisar por artista");
+            System.out.println("3. Pesquisar por duração");
+            System.out.println("4. Pesquisar por duração acima de x");
+            System.out.println("5. Número de músicas no ficheiro");
+            System.out.println("6. Sair");
+            opcao = input.nextInt();
+
+            switch(opcao){
+
+
+
+            }
+
+
+
+
+        } while (opcao != 6);
+
     }
 
 
