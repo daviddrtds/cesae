@@ -31,6 +31,4 @@ public class Livro {
         System.out.println("Número de páginas: " + this.numPaginas);
         System.out.println("ISBN: " + this.isbn);
     }
-
-
 }
