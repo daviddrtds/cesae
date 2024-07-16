@@ -19,7 +19,6 @@ public class Conta {
 
 
     public void levantarValor(double valor) {
-
         if (this.saldo < valor) {
             System.out.println("Valor insuficiente");
         } else {
@@ -34,16 +33,11 @@ public class Conta {
 
 
     public void transferencia(double valor, Conta nomeConta) {
-
         if (this.saldo < valor) {
             System.out.println("Valor insuficiente");
         } else {
             this.saldo -= valor;
             nomeConta.depositarValor(valor);
-
         }
-
-
     }
-
 }

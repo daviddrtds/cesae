@@ -5,9 +5,9 @@ public class Main {
 
         Calculadora novaCalc = new Calculadora();
 
-        novaCalc.multiplicacao(2, 7);
-        novaCalc.adicao(5, 6);
-        novaCalc.subtracao(4, 9);
-        novaCalc.divisao(2, 5);
+        System.out.println(novaCalc.multiplicacao(2, 7));
+        System.out.println(novaCalc.adicao(5, 6));
+        System.out.println(novaCalc.subtracao(4, 9));
+        System.out.println(novaCalc.divisao(2, 5));
     }
 }

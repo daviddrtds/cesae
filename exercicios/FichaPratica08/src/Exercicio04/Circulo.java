@@ -1,18 +1,18 @@
 package Exercicio04;
 
 public class Circulo {
-    private int raio;
+    private double raio;
 
     /**
      * Metodo construtor para um circulo
      *
      * @param raio recebe o raio em cm
      */
-    public Circulo(int raio) {
+    public Circulo(double raio) {
         this.raio = raio;
     }
 
-    public int diametro() {
+    public double diametro() {
         return this.raio * 2;
     }
 
