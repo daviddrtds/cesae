@@ -26,9 +26,28 @@ public class Imovel {
     }
 
 
+    public void setAcabamento(Acabamento acabamento) {
+        this.acabamento = acabamento;
+    }
+
+    public void imprimirCasa() {
+        System.out.println("Imóvel");
+        System.out.println("Rua: " + this.rua);
+        System.out.println("Nº Porta: " + this.numPorta);
+        System.out.println("Cidade: " + this.cidade);
+        System.out.println("Tipo de Imóvel: " + this.tipo);
+        System.out.println("Estado: " + this.acabamento);
+        System.out.println("Área total: " + this.area + "m2");
+        System.out.println("Nº Quartos: " + this.quartos);
+        System.out.println("Nº Casas de Banho:" + this.casaBanho);
+        System.out.println("Área da piscina: " + this.areaPiscina + "m2");
+    }
+
     public double valorImovel() {
 
         double valor = 0;
+        int totalQuartos = 0;
+        int totalCasaBanho = 0;
 
         switch (tipo) {
 
@@ -46,21 +65,47 @@ public class Imovel {
         }
 
 
+        for (int i = 0; i < this.quartos; i++) {
+            totalQuartos = totalQuartos + 7500;
+        }
+
+        for (int i = 0; i < this.casaBanho; i++) {
+            totalCasaBanho = totalCasaBanho + 10500;
+        }
+
+
+        valor = valor + totalQuartos + totalCasaBanho;
+        valor = valor + (this.areaPiscina * 1000);
+
+
         switch (acabamento) {
 
             case Acabamento.RESTAURO:
+                valor *= 0.5;
                 break;
 
             case Acabamento.USADA:
+                valor *= 0.9;
                 break;
 
             case Acabamento.NOVA:
                 break;
 
             case Acabamento.TOP:
+                valor = valor + (valor * 0.25);
                 break;
         }
 
+        return valor;
+    }
+
+
+    public Imovel compararImovel(Imovel outraCasa) {
+
+        if (this.valorImovel() > outraCasa.valorImovel()) {
+            return this;
+        }
+        return outraCasa;
     }
 
 }
