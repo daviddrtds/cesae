@@ -1,6 +1,7 @@
 package Exercicio01;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MusicPlayer {
 
@@ -9,6 +10,7 @@ public class MusicPlayer {
     public MusicPlayer() {
         this.programacao = new ArrayList<Musica>();
     }
+
 
     public void addMusica(Musica novaMusica) {
         this.programacao.add(novaMusica);
@@ -20,6 +22,7 @@ public class MusicPlayer {
         this.programacao.set(index, novaMusica);
         System.out.println("Música substituída com sucesso!");
     }
+
 
     public void removerMusica(Musica musicaARemover) {
         this.programacao.remove(musicaARemover);
@@ -41,6 +44,7 @@ public class MusicPlayer {
         }
     }
 
+
     public void verDuracao() {
         int totalSec = 0;
 
@@ -57,4 +61,10 @@ public class MusicPlayer {
         System.out.print("Duração total da lista de reprodução: " + horas + "h:" + minutos + "m:" + segundos + "s");
         System.out.println();
     }
+
+    public void trocar(MusicPlayer lista, int num1, int num2) {
+
+        Collections.swap(this.programacao, num1, num2);
+    }
+
 }

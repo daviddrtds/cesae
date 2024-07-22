@@ -22,9 +22,8 @@ public class Main {
         lista1.verLista();
         lista1.verDuracao();
 
-
-//        Collections.swap(lista1, 0, lista1. - 1);
-
-
+        lista1.trocar(lista1, 1, 2);
+        lista1.removerMusica(musica4);
+        lista1.verLista();
     }
 }
