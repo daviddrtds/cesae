@@ -26,22 +26,82 @@ public class BarcoPesca {
     }
 
 
-    public void pescarPeixe(Peixe novoPeixe) {
-        this.listaPeixes.add(novoPeixe);
-        System.out.println("Peixe pescado com sucesso!");
+    public double calcularCarga() {
+        double cargaAtual = 0;
+
+        for (Peixe estePeixe : this.listaPeixes) {
+            cargaAtual += estePeixe.getPeso();
+        }
+
+        for (Marisco esteMarisco : this.listaMariscos) {
+            cargaAtual += esteMarisco.getPeso();
+        }
+        return cargaAtual;
     }
 
-    public void largarPeixe(int index) {
-        this.listaPeixes.remove(index);
+
+    public void pescarPeixe(Peixe novoPeixe) {
+
+        if (novoPeixe.getPeso() + this.calcularCarga() <= this.capacidadeKg) {
+            this.listaPeixes.add(novoPeixe);
+            System.out.println("Peixe pescado com sucesso!");
+        } else {
+            System.out.println("Demasiado peso para o barco!!!!!!");
+        }
     }
 
     public void pescarMarisco(Marisco novoMarisco) {
-        this.listaMariscos.add(novoMarisco);
-        System.out.println("Marisco pescado com sucesso!");
+        if (novoMarisco.getPeso() + this.calcularCarga() <= this.capacidadeKg) {
+            this.listaMariscos.add(novoMarisco);
+            System.out.println("Marisco pescado com sucesso!");
+        } else {
+            System.out.println("Demasiado peso para o barco!!!!!!");
+        }
     }
+
+
+    public void largarPeixe(int index) {
+        this.listaPeixes.remove(index);
+        System.out.println("Peixe removido com sucesso!");
+    }
+
 
     public void largarMarisco(int index) {
         this.listaMariscos.remove(index);
+        System.out.println("Marisco removido com sucesso!");
+
     }
+
+
+    public void verDetalhes() {
+        System.out.println();
+        System.out.println("--- " + this.nome + " ---");
+        System.out.println("Carga atual: " + this.calcularCarga() + "kg");
+        System.out.println();
+        System.out.println("Peixes pescados:");
+        for (Peixe cadaPeixe : this.listaPeixes) {
+            cadaPeixe.verDetalhesPeixe();
+        }
+        System.out.println();
+        System.out.println("Marisco pescado:");
+        for (Marisco cadaMarisco : this.listaMariscos) {
+            cadaMarisco.verDetalhesMarisco();
+        }
+        System.out.println();
+        System.out.println("Valor total da pescaria: " + this.valorTotal()+"€");
+    }
+
+
+    public double valorTotal() {
+        double valorTotal = 0;
+        for (Peixe estePeixe : this.listaPeixes) {
+            valorTotal += estePeixe.getPeso() * estePeixe.getPrecoKg();
+        }
+        for (Marisco esteMarisco : this.listaMariscos) {
+            valorTotal += esteMarisco.getPeso() * esteMarisco.getPrecoKg();
+        }
+        return valorTotal;
+    }
+
 
 }

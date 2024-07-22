@@ -13,8 +13,15 @@ public class Marisco {
         this.precoKg = precoKg;
     }
 
+    public double getPeso() {
+        return peso;
+    }
+
+    public double getPrecoKg() {
+        return precoKg;
+    }
 
     public void verDetalhesMarisco() {
-        System.out.println("Espécie: " + this.especie + " | " + this.peso + " | " + this.precoKg + "/kg");
+        System.out.println("Espécie: " + this.especie + " | " + this.peso + "kg | " + this.precoKg + "€/kg");
     }
 }

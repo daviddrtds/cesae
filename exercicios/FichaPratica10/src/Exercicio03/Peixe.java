@@ -13,8 +13,15 @@ public class Peixe {
         this.precoKg = precoKg;
     }
 
+    public double getPeso() {
+        return peso;
+    }
+
+    public double getPrecoKg() {
+        return precoKg;
+    }
 
     public void verDetalhesPeixe() {
-        System.out.println("Espécie: " + this.especie + " | " + this.peso + " | " + this.precoKg + "/kg");
+        System.out.println("Espécie: " + this.especie + " | " + this.peso + "kg | " + this.precoKg + "€/kg");
     }
 }
