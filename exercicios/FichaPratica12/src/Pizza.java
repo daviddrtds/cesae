@@ -12,13 +12,16 @@ public class Pizza {
     private ArrayList<IngredientePizza> ingredientesPizza;
 
 
-    public Pizza(String codigoPizza, String nomePizza, String descricaoPizza, double precoPizza, Tamanho tamanhoPizza) {
+    public Pizza(String codigoPizza, String nomePizza, String descricaoPizza, double precoPizza, Tamanho tamanhoPizza, Base base, double quantidadeBase, Topping primeiroTopping, double quantidadeTopping) {
         this.codigoPizza = codigoPizza;
         this.nomePizza = nomePizza;
         this.descricaoPizza = descricaoPizza;
         this.precoPizza = precoPizza;
         this.tamanhoPizza = tamanhoPizza;
         this.ingredientesPizza = new ArrayList<IngredientePizza>();
+        this.ingredientesPizza.add(new IngredientePizza(base, quantidadeBase));
+        this.ingredientesPizza.add(new IngredientePizza(primeiroTopping, quantidadeTopping));
+
     }
 
 
@@ -35,7 +38,7 @@ public class Pizza {
     public void removerIngrediente(String codigo) {
 
         for (IngredientePizza cadaIngrediente : this.ingredientesPizza) {
-            if (cadaIngrediente.getIngrediente().getCodigoIngrediente().equals(codigo)) {
+            if (cadaIngrediente.getIngrediente().getCodigoIngrediente().equals(codigo) && this.ingredientesPizza.indexOf(cadaIngrediente) != 0) {
                 this.ingredientesPizza.remove(cadaIngrediente);
                 return;
             }
