@@ -1,7 +1,5 @@
 import Enums.DietaAnimal;
 import Enums.TipoPlanta;
-import SerVivo.Animal;
-import SerVivo.Planta;
 
 public class Main {
     public static void main(String[] args) {

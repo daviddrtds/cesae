@@ -38,25 +38,25 @@ public class Pizza {
 
     public void removerIngrediente(String codigo) {
 
+
+    }
+
+
+    public void alterarQuantidade(String codigo, double novaQuant) {
         for (IngredientePizza cadaIngrediente : this.listaIngredientesPizza) {
-            if (cadaIngrediente.getIngrediente().getCodigoIngrediente().equals(codigo) && this.listaIngredientesPizza.indexOf(cadaIngrediente) != 0) {
-                this.listaIngredientesPizza.remove(cadaIngrediente);
+            if (cadaIngrediente.getIngrediente().getCodigoIngrediente().equals(codigo)) {
+                cadaIngrediente.setQuantidade(novaQuant);
                 return;
             }
         }
     }
 
 
-    public void alterarQuantidade(IngredientePizza ingrediente, double novaQuant) {
-        ingrediente.setQuantidade(novaQuant);
-    }
-
-
     public double numCalorias() {
 
         double totalCal = 0;
-        for (IngredientePizza cadaIngrediente : this.listaIngredientesPizza) {
-            totalCal = totalCal + (cadaIngrediente.getIngrediente().getCaloriaPorMedida() * cadaIngrediente.getQuantidade());
+        for (IngredientePizza atual : this.listaIngredientesPizza) {
+            totalCal = totalCal + (atual.getIngrediente().getCaloriaPorMedida() * atual.getQuantidade());
         }
 
         return totalCal;
@@ -72,7 +72,7 @@ public class Pizza {
         System.out.println("Descrição: " + this.descricaoPizza);
         System.out.println("Preço: " + this.precoPizza + "€");
         System.out.println("Tamanho: " + this.tamanhoPizza);
-        System.out.println("Total Calorias: " + numCalorias() + " Kcal");
+        System.out.println("Total Calorias: " + this.numCalorias() + " Kcal");
         for (IngredientePizza esteIngrediente : this.listaIngredientesPizza) {
             System.out.print("Ingrediente " + count + ": Quantidade: " + esteIngrediente.getQuantidade() + " " + esteIngrediente.getIngrediente().getMedidaIngrediente() + " | ");
             esteIngrediente.verDetalhes();

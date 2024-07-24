@@ -1,5 +1,3 @@
-package SerVivo;
-
 import Enums.TipoPlanta;
 
 public class Planta extends SerVivo {

@@ -1,5 +1,3 @@
-package SerVivo;
-
 import Enums.DietaAnimal;
 
 public class Animal extends SerVivo {

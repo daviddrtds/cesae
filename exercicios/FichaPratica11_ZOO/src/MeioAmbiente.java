@@ -1,5 +1,4 @@
-
-import SerVivo.SerVivo;
+import Enums.TipoPlanta;
 
 import java.util.ArrayList;
 
@@ -35,12 +34,29 @@ public class MeioAmbiente {
 
     public boolean plantaBebe(int indexPlanta) {
 
-        double quantoBebe=0;
+        double quantoBebe = 0;
 
-        this.listaSeres.get(indexPlanta)
+        if (this.listaSeres.get(indexPlanta) instanceof Planta) {
+            Planta estaPlanta = (Planta) this.listaSeres.get(indexPlanta);
+            if (estaPlanta.getTipoPlanta().equals(TipoPlanta.ARVORE)) {
+                quantoBebe = 1;
+                this.litrosAguaMeio -= quantoBebe;
+                return true;
+            } else if (estaPlanta.getTipoPlanta().equals(TipoPlanta.FLOR)) {
+                quantoBebe = 0.1;
+                this.litrosAguaMeio -= quantoBebe;
+                return true;
+            } else if (estaPlanta.getTipoPlanta().equals(TipoPlanta.ERVA)) {
+                quantoBebe = 0.25;
+                this.litrosAguaMeio -= quantoBebe;
+                return true;
+            }
 
 
+        }
 
+        this.listaSeres.remove(this.listaSeres.get(indexPlanta));
+        return false;
     }
 //
 //

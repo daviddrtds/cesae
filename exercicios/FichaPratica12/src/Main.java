@@ -25,6 +25,8 @@ public class Main {
 
 
         novaPizza1.verPizza();
+        novaPizza1.alterarQuantidade("crn01", 50);
+        novaPizza1.verPizza();
 
     }
 }

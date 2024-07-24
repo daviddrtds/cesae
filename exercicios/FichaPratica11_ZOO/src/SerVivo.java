@@ -1,5 +1,3 @@
-package SerVivo;
-
 public class SerVivo {
 
     protected String nome;
