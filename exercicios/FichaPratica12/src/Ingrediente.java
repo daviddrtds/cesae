@@ -2,10 +2,10 @@ import Enums.Medida;
 
 public class Ingrediente {
 
-    private String codigoIngrediente;
-    private String nomeIngrediente;
-    private Medida medidaIngrediente;
-    private int caloriaPorMedida;
+    protected String codigoIngrediente;
+    protected String nomeIngrediente;
+    protected Medida medidaIngrediente;
+    protected int caloriaPorMedida;
 
 
     public Ingrediente(String codigoIngrediente, String nomeIngrediente, Medida medidaIngrediente, int caloriaPorMedida) {

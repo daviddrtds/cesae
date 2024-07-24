@@ -10,5 +10,15 @@ public class Base extends Ingrediente {
         super(codigoIngrediente, nomeIngrediente, medidaIngrediente, caloriaPorMedida);
         this.tipoBase = tipoBase;
         this.descricao = descricao;
+        this.medidaIngrediente = Medida.GRAMAS;
+    }
+
+
+    public BaseEnum getTipoBase() {
+        return tipoBase;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 }
