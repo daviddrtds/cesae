@@ -14,4 +14,21 @@ public class Planta extends SerVivo {
         this.tipoPlanta = tipoPlanta;
         this.grauDefesa = grauDefesa;
     }
+
+
+    @Override
+    public void verDetalhes() {
+        super.verDetalhes();
+        System.out.println("Tipo de planta: " + this.tipoPlanta);
+        System.out.println("Grau de defesa: " + this.grauDefesa +"/5");
+
+    }
+
+    public TipoPlanta getTipoPlanta() {
+        return tipoPlanta;
+    }
+
+    public int getGrauDefesa() {
+        return grauDefesa;
+    }
 }

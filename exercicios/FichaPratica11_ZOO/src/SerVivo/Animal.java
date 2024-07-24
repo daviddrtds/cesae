@@ -19,4 +19,34 @@ public class Animal extends SerVivo {
         this.dietaAnimal = dietaAnimal;
         this.barulhoAnimal = barulhoAnimal;
     }
+
+    @Override
+    public void verDetalhes() {
+        super.verDetalhes();
+        System.out.println("Precisa comer? " + this.fomeAnimal);
+        System.out.println("Peso: " + this.pesoAnimal + " Kg");
+        System.out.println("Nível inteligência: " + this.inteligenciaAnimal+"/100");
+        System.out.println("Dieta: " + this.dietaAnimal);
+        System.out.println("Som que produz: " + this.barulhoAnimal);
+    }
+
+    public boolean isFomeAnimal() {
+        return fomeAnimal;
+    }
+
+    public double getPesoAnimal() {
+        return pesoAnimal;
+    }
+
+    public double getInteligenciaAnimal() {
+        return inteligenciaAnimal;
+    }
+
+    public DietaAnimal getDietaAnimal() {
+        return dietaAnimal;
+    }
+
+    public String getBarulhoAnimal() {
+        return barulhoAnimal;
+    }
 }
