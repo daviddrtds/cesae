@@ -11,4 +11,11 @@ public class Inseto extends SerVivo {
     public boolean isVenenoso() {
         return venenoso;
     }
+
+
+    @Override
+    public void verDetalhes() {
+        super.verDetalhes();
+        System.out.println("É venenoso? " + this.venenoso);
+    }
 }
