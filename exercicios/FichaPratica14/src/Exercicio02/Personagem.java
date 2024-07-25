@@ -27,35 +27,39 @@ public class Personagem extends Entidade {
     @Override
     void ataque(Npc inimigo) {
 
+        double tempJogador = this.vida;
+        double tempNpc = inimigo.vida;
         int count = 0;
 
         do {
 
-            inimigo.vida = inimigo.vida - this.poder;
+            tempNpc -= this.poder;
 
-            if (inimigo.vida <= 0) {
+            if (tempNpc <= 0) {
                 count++;
                 System.out.println("Parabéns " + this.tipoClasse + " " + this.nome + " ganhou um combate contra " + inimigo.nome + ", com o uso de " + this.arma + " no " + count + "ª turno.");
                 this.addLvl();
+                System.out.println("Stats atuais: " + this.vida + "/vida, " + this.poder + "/poder, e subiu para o nível " + this.nivel);
                 return;
             }
 
-            this.vida = this.vida - inimigo.poder;
+            tempJogador -= inimigo.poder;
 
-            if (this.vida <= 0) {
-                System.out.println("Jogador morreu");
+            if (tempJogador <= 0) {
+                count++;
+                System.out.println("Jogador morreu no " + count + "ª turno contra um " + inimigo.nome);
                 return;
             }
 
             count++;
             System.out.println();
             System.out.println("Fim do " + count + "ª turno");
-            System.out.println("Vida do jogador: " + this.vida);
-            System.out.println("Vida do inimigo: " + inimigo.vida);
+            System.out.println("Vida do jogador: " + tempJogador);
+            System.out.println("Vida do inimigo: " + tempNpc);
             System.out.println();
 
 
-        } while (this.vida >= 0 && inimigo.vida >= 0);
+        } while (tempJogador >= 0 && tempNpc >= 0);
 
 
     }
