@@ -2,18 +2,18 @@ package Exercicio02;
 
 abstract class Entidade {
 
-    private String nome;
-    private int vida;
-    private int poder;
+    protected String nome;
+    protected double vida;
+    protected double poder;
 
 
-    public Entidade(String nome, int vida, int poder) {
+    public Entidade(String nome, double vida, double poder) {
         this.nome = nome;
         this.vida = vida;
         this.poder = poder;
     }
 
 
-    abstract void ataque();
+    abstract void ataque(Npc inimigo);
 
 }
