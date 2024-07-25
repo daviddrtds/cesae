@@ -1,4 +1,4 @@
-
+package Exercicio01;
 
 abstract class FiguraGeometrica {
 
@@ -10,7 +10,8 @@ abstract class FiguraGeometrica {
 
 
     public void mostrarCor() {
-        System.out.println("A figura geométrica é " + this.cor);
+        System.out.println();
+        System.out.println("A figura geométrica " + this.getClass() + " é " + this.cor);
     }
 
 

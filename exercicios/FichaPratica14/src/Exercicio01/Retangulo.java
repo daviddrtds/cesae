@@ -1,4 +1,4 @@
-
+package Exercicio01;
 
 
 public class Retangulo extends FiguraGeometrica {
