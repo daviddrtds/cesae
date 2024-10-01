@@ -21,6 +21,7 @@ public class Main {
 
         do {
             System.out.println();
+            System.out.println("------------------------------");
             System.out.println("------- Criar ficheiro -------");
             System.out.println("------------------------------");
             System.out.println("1. Ficheiro Word");
@@ -72,11 +73,10 @@ public class Main {
                     case 3:
                         docFinal.close();
                         break;
-                    case 0:
-                        break;
+
                 }
 
-            } while (userInput != 0);
+            } while (userInput != 3);
 
             System.out.println();
             System.out.println("Deseja criar novo ficheiro?");
