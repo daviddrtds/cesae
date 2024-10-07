@@ -14,9 +14,11 @@ public class Main {
 
 
 
+
         jogador1.ataque(npc1);
         jogador1.ataque(npc2);
         jogador1.ataque(npc3);
+
 
 
 

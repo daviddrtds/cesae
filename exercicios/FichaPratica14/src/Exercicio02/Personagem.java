@@ -17,6 +17,7 @@ public class Personagem extends Entidade {
     }
 
 
+
     public void addLvl() {
         this.vida = this.vida + (this.vida * 0.1);
         this.poder = this.poder + (this.poder * 0.1);
